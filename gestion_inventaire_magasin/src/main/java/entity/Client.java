@@ -31,7 +31,7 @@ public class Client {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", saleHistory=" + saleHistory +
+                ", saleHistory=" + getCountSale() +
                 '}';
     }
 
