@@ -9,17 +9,25 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ItemController {
-    private static final ItemService itemService = new ItemService();
+    protected static final ItemService itemService = new ItemService();
     private static final Scanner scanner = new Scanner(System.in);
     public static void menu(){
         while(true){
-            System.out.println("1. Add Item");
-            System.out.println("2. Show Item");
-            System.out.println("3. Show All Items");
-            System.out.println("4. Update Item");
-            System.out.println("5. Delete Item");
-            System.out.println("0. Return to main menu");
-            int choice = scanner.nextInt();
+            String prompt = """
+                    __________________________
+                   |#### Item Management  ####|
+                   |__________________________|
+                   |                          |
+                   |1. Add Item               |
+                   |2. Show Item              |
+                   |3. Show All Items         |
+                   |4. Update Item            |
+                   |5. Delete Item            |
+                   |0. Return to main menu    |
+                   |                          |
+                   |__________________________|
+                   """;
+            int choice = Function.checkInputInt(scanner, prompt);
             scanner.nextLine();
             switch(choice){
                 case 1:
@@ -44,7 +52,7 @@ public class ItemController {
         }
     }
 
-    private static void createItem(){
+    protected static void createItem(){
         int itemCount = 0;
         while (itemCount <= 0){
             itemCount = Function.checkInputInt(scanner, "Enter number of items to add: ");
@@ -75,7 +83,7 @@ public class ItemController {
             }
         }
     }
-    private static void showAllItems(){
+    protected static void showAllItems(){
         List<Item> itemList = itemService.findAll();
         if(itemList.isEmpty()){
             System.out.println("No items found");
@@ -83,7 +91,7 @@ public class ItemController {
         }
         itemList.forEach(System.out::println);
     }
-    private static void showItem(){
+    protected static void showItem(){
         int id = Function.checkInputInt(scanner, "Enter id of item: ");
         Item item = itemService.findById(id);
         if(item != null){
@@ -93,7 +101,7 @@ public class ItemController {
         }
     }
 
-    private static void updateItem(){
+    protected static void updateItem(){
         int id = Function.checkInputInt(scanner, "Enter id of item: ");
         Item item = itemService.findById(id);
         if(item == null){
@@ -123,7 +131,7 @@ public class ItemController {
                 System.out.println("Item successfully updated");
             }
     }
-    private static void deleteItem(){
+    protected static void deleteItem(){
         int id = Function.checkInputInt(scanner, "Enter id of item: ");
         Item item = itemService.findById(id);
         if(item == null){
