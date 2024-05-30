@@ -22,6 +22,13 @@ Renommer le fichier hibernate.properties.example en hibernate.properties et chan
 
 ## Etape 3
 Pour acceder a l'application utiliser le MainController 
-Vous pouvez avoir acces au crud des articles, des clients et des ventes (sale & orders)
+Une fois lancé vous aurez un menu et vous devrez choisir entre les differente catégories
+
+Les articles(items) sera le premier dans le menu dedans vous aurez la création, la visualisation, la modification et la suppression des articles.
+
+Les Client sera le second dans le menu dedans vous aurez la création, la visualisation, la modification et la suppression des clients.
+
+Les ventes(sales & orders) sera le troisième et dernier du menu dedans vous aurez la possibilité d'enregistrer une vente, de modifier son status, de voir les ventes et de voir une vente en particulier grace a son id et la suppression de la vente.
+
 
 Actuellement il manque les stats & rapports des ventes.
