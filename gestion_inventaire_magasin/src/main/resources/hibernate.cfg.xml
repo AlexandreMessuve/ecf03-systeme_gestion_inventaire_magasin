@@ -4,5 +4,6 @@
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
+        <mapping class="entity.Item" />
     </session-factory>
 </hibernate-configuration>
