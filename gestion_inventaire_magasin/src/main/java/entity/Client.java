@@ -22,7 +22,7 @@ public class Client {
     private String name;
     private String email;
 
-    @OneToMany(mappedBy = "client")
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Sale> saleHistory = new ArrayList<>();
 
     @Override
@@ -31,6 +31,7 @@ public class Client {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
+                ", saleHistory=" + saleHistory +
                 '}';
     }
 
