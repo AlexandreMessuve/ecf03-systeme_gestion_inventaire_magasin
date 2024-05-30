@@ -28,7 +28,7 @@ Les articles(items) sera le premier dans le menu dedans vous aurez la création,
 
 Les Client sera le second dans le menu dedans vous aurez la création, la visualisation, la modification et la suppression des clients.
 
-Les ventes(sales & orders) sera le troisième et dernier du menu dedans vous aurez la possibilité d'enregistrer une vente, de modifier son status, de voir les ventes et de voir une vente en particulier grace a son id et la suppression de la vente.
+Les ventes(sales & orders) sera le troisième et dernier du menu dedans vous aurez la possibilité d'enregistrer une vente, de modifier son status, de voir les ventes et de voir une vente en particulier grace a son id, la suppression de la vente et le nombre de vente realisé.
 
 
 Actuellement il manque les stats & rapports des ventes.

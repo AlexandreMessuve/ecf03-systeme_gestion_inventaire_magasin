@@ -6,7 +6,6 @@ import entity.Sale;
 import service.OrderService;
 import util.Function;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class OrderController {

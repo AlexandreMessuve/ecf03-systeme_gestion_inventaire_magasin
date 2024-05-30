@@ -54,9 +54,9 @@ public class SaleService extends BaseService implements Repository<Sale> {
         return sales;
     }
 
-    public int countAll(){
+    public long countAll(){
         session = sessionFactory.openSession();
-        Integer count = session.createQuery("select count(s) from Sale s", Integer.class).uniqueResult();
+        Long count = session.createQuery("select count(s) from Sale s", Long.class).uniqueResult();
         session.close();
         return count;
     }

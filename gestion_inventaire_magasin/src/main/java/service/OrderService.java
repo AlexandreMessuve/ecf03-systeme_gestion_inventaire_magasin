@@ -53,10 +53,4 @@ public class OrderService extends BaseService implements Repository<Order> {
         return orders;
     }
 
-    public List<Order> findBySaleId(int id) {
-        session = sessionFactory.openSession();
-        List<Order> orders = session.createQuery("from Order where sale.id = :id", Order.class).setParameter("id", id).list();
-        session.close();
-        return orders;
-    }
 }

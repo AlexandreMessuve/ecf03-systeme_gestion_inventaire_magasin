@@ -1,10 +1,8 @@
 package controller;
 
 import entity.Client;
-import entity.Item;
 import entity.Sale;
 import entity.SaleState;
-import service.OrderService;
 import service.SaleService;
 import util.Function;
 
@@ -27,6 +25,7 @@ public class SaleController {
                        |3. Show All Sales         |
                        |4. Update SaleState       |
                        |5. Delete Sale            |
+                       |6. Show Count Sale        |
                        |0. Return to main menu    |
                        |                          |
                        |__________________________|
@@ -47,6 +46,9 @@ public class SaleController {
                     break;
                 case 5:
                     deleteSale();
+                    break;
+                case 6:
+                    System.out.println("Count: "+saleService.countAll()+ " sales registered");
                     break;
                 case 0:
                     return;
